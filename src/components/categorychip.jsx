@@ -1,10 +1,13 @@
 
-function CategoriesBox({children}){
-    const {name} = children;
+function CategoriesBox({children, isChosen}){
+
+    console.log(isChosen);
+    
+    const categories = children;
     return(
         <>
-        <div className="box">
-            <h3>{name}</h3>
+        <div className={`${isChosen ? 'box2': 'box'}`}>
+            <h3>{categories?.name}</h3>
         </div>
         </>
     )
