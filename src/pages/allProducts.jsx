@@ -23,12 +23,11 @@ function AllProducts() {
     const url =
       chosenCategory === "All"
         ? `https://dummyjson.com/products`
-        : `https://dummyjson.com/products/categories/${chosenCategory}`;
+        : `https://dummyjson.com/products/category/${chosenCategory}`;
     // console.log("url", url);
 
     try {
       let res = await axios.get(url);
-      console.log('res', res);
       setProducts([...res.data.products]);
     } catch (error) {
       console.log("error", error);
