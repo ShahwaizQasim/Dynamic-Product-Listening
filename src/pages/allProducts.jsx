@@ -46,8 +46,6 @@ function AllProducts() {
       console.log("Error", error.message);
     }
   };
-  console.log("products", products);
-  console.log("chosenCategory", chosenCategory);
 
   return (
     <>
